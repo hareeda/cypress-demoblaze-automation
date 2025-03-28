@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-28T15:49:56.933Z",
+    "end": "2025-03-28T15:50:10.354Z",
+    "duration": 13421,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53623571-faa2-4f80-b65c-053f537bfdc5",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\productTest.cy.js",
+      "file": "cypress\\integration\\tests\\productTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7af2cd7f-2b9a-4882-afa6-c7a76785900c",
+          "title": "E-Commerce Product Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should verify product details for all products",
+              "fullTitle": "E-Commerce Product Tests Should verify product details for all products",
+              "timedOut": null,
+              "duration": 13297,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.productData.products.forEach(product => {\n  cy.log(`Verifying details for ${product.name}`);\n  _homePage.default.openProduct(product.name);\n  _productPage.default.verifyProductDetails(product.name, product.price, product.description);\n  // Return to the previous page before moving to the next product\n  cy.go(\"back\");\n});",
+              "err": {},
+              "uuid": "fd3e543a-4970-4c31-a210-41f7b28ebc1d",
+              "parentUUID": "7af2cd7f-2b9a-4882-afa6-c7a76785900c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd3e543a-4970-4c31-a210-41f7b28ebc1d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13297,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

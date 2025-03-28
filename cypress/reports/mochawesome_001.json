@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-28T15:49:00.777Z",
+    "end": "2025-03-28T15:49:13.509Z",
+    "duration": 12732,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3ef4362-d8e7-428b-8269-1f92bca96e29",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\checkoutTest.cy.js",
+      "file": "cypress\\integration\\tests\\checkoutTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5abc31eb-543d-4d29-a357-86ef02508816",
+          "title": "E-Commerce Cart Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should add a product to the cart",
+              "fullTitle": "E-Commerce Cart Tests Should add a product to the cart",
+              "timedOut": null,
+              "duration": 12649,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_homePage.default.openProduct(this.product.products[0].name);\n_productPage.default.addToCart();\n_cartPage.default.openCart();\n_cartPage.default.verifyProductInCart(this.product.products[0].name);\n_cartPage.default.clickPlaceOrder();\n_checkoutPage.default.fillCheckoutDetails(this.order.orderDetails.name, this.order.orderDetails.country, this.order.orderDetails.city, this.order.orderDetails.creditCard, this.order.orderDetails.month, this.order.orderDetails.year);\n_checkoutPage.default.submitOrder();\n_checkoutPage.default.verifyOrderSuccess();",
+              "err": {},
+              "uuid": "0c843e73-e223-49af-8c48-0e63c826741b",
+              "parentUUID": "5abc31eb-543d-4d29-a357-86ef02508816",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0c843e73-e223-49af-8c48-0e63c826741b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12649,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "expectedLoginText": {
+      "welcomeText": "Welcome testUser",
+      "noUser": "User does not exist.",
+      "wrongPass": "Wrong password.",
+      "blankTextErrorPass": "Please fill out Username and Password."
+    },
+    "expectedSignUpText": {
+      "successSignup": "Sign up successful.",
+      "errorSignup": "This user already exist."
+    },
+    "expectedContactText":{
+      "successMessage": "Thanks for the message!!"
+    }
+  }

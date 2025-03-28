@@ -1,0 +1,18 @@
+{
+  "validUser": {
+    "username": "testUser",
+    "password": "testPassword"
+  },
+  "invalidUser": {
+    "username": "wrongUser",
+    "password": "wrongPass"
+  },
+  "newUser": {
+    "username": "testuser123",
+    "password": "Test@1234"
+  },
+  "existingUser": {
+    "username": "existingUser",
+    "password": "password123"
+  }
+}

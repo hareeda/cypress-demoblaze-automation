@@ -1,0 +1,11 @@
+{
+    "orderDetails": {
+      "name": "John Doe",
+      "country": "USA",
+      "city": "New York",
+      "creditCard": "1234 5678 9012 3456",
+      "month": "07",
+      "year": "2026"
+    }
+  }
+  

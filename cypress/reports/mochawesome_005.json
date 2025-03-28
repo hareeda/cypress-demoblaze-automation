@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-28T15:50:16.042Z",
+    "end": "2025-03-28T15:50:25.764Z",
+    "duration": 9722,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5fb5a723-27c4-400f-8e42-321c6b040657",
+      "title": "",
+      "fullFile": "cypress\\integration\\tests\\signupTest.cy.js",
+      "file": "cypress\\integration\\tests\\signupTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "498b3900-f63f-45be-9bbd-3b59907d8b5b",
+          "title": "User Signup Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should sign up successfully with valid credentials",
+              "fullTitle": "User Signup Tests Should sign up successfully with valid credentials",
+              "timedOut": null,
+              "duration": 5588,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_locators.default.signupPage.signupButton).should(\"be.visible\").click();\ncy.get(_locators.default.signupPage.signupModal).should(\"be.visible\");\ncy.get(_locators.default.signupPage.usernameInput).should(\"be.visible\").type(this.userData.newUser.username);\ncy.get(_locators.default.signupPage.passwordInput).should(\"be.visible\").type(this.userData.newUser.password);\ncy.get(_locators.default.signupPage.submitButton).click();\ncy.on(_locators.default.signupPage.successAlert, str => {\n  expect(str).to.contains(this.expected.expectedSignUpText.successSignup);\n});",
+              "err": {},
+              "uuid": "b94d02a1-cbc7-4a16-ba68-95ec562286d5",
+              "parentUUID": "498b3900-f63f-45be-9bbd-3b59907d8b5b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should fail to sign up with existing username",
+              "fullTitle": "User Signup Tests Should fail to sign up with existing username",
+              "timedOut": null,
+              "duration": 3991,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(_locators.default.signupPage.signupButton).click();\ncy.get(_locators.default.signupPage.signupModal).should(\"be.visible\");\ncy.get(_locators.default.signupPage.usernameInput).type(this.userData.existingUser.username);\ncy.get(_locators.default.signupPage.passwordInput).type(this.userData.existingUser.password);\ncy.get(_locators.default.signupPage.submitButton).click();\ncy.on(_locators.default.signupPage.successAlert, str => {\n  expect(str).to.contains(this.expected.expectedSignUpText.errorSignup);\n});",
+              "err": {},
+              "uuid": "bbf9d8d1-c291-4064-a409-78edddad1120",
+              "parentUUID": "498b3900-f63f-45be-9bbd-3b59907d8b5b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b94d02a1-cbc7-4a16-ba68-95ec562286d5",
+            "bbf9d8d1-c291-4064-a409-78edddad1120"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9579,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
